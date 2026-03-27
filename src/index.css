@@ -56,7 +56,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  @apply bg-[#faf9f6] text-[#0B1221] selection:bg-primary-fixed-dim selection:text-primary;
+  @apply bg-transparent text-white selection:bg-primary-fixed-dim selection:text-primary;
 }
 
 .font-serif {
