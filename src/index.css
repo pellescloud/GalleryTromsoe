@@ -49,18 +49,18 @@
   --color-secondary-fixed-dim: #c6c6c6;
   --color-surface-container: #f1eded;
 
-  --font-headline: "Noto Serif", serif;
+  --font-headline: "Playfair Display", serif;
   --font-body: "Inter", sans-serif;
   --font-label: "Inter", sans-serif;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  @apply bg-surface text-on-surface selection:bg-primary-fixed-dim selection:text-primary;
+  @apply bg-[#faf9f6] text-[#0B1221] selection:bg-primary-fixed-dim selection:text-primary;
 }
 
 .font-serif {
-  font-family: 'Noto Serif', serif;
+  font-family: 'Playfair Display', serif;
 }
 
 .material-symbols-outlined {
