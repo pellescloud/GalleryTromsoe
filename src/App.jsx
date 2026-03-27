@@ -6,12 +6,14 @@ import MasterpieceEditions from './components/MasterpieceEditions';
 import BespokeFraming from './components/BespokeFraming';
 import LoupeFeature from './components/LoupeFeature';
 import Footer from './components/Footer';
+import BackgroundController from './components/BackgroundController';
 
 function App() {
   return (
     <>
+      <BackgroundController />
       <Navbar />
-      <main className="pt-24">
+      <main className="pt-24 relative z-0">
         <Hero />
         <CuratedSeries />
         <MasterpieceEditions />
