@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-arctic-white: #FFFFFF;
+  --color-arctic-snow: #F8FAFC;
+  --color-arctic-midnight: #001F3F;
+  --color-arctic-teal: #3D7A8F;
+  --color-arctic-charcoal: #2C3E50;
+
+  --font-inter: var(--font-inter);
+  --font-playfair: var(--font-playfair);
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-white text-arctic-charcoal font-sans antialiased selection:bg-arctic-teal selection:text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-arctic-midnight text-white px-10 py-5 text-[10px] tracking-[0.4em] uppercase font-bold transition-all duration-500 hover:bg-arctic-charcoal active:scale-95 shadow-xl;
+  }
+
+  .btn-outline {
+    @apply border border-arctic-midnight text-arctic-midnight px-10 py-5 text-[10px] tracking-[0.4em] uppercase font-bold transition-all duration-500 hover:bg-arctic-midnight hover:text-white active:scale-95;
+  }
+
+  .arctic-input {
+    @apply w-full bg-arctic-snow border-none px-6 py-4 text-sm focus:ring-1 ring-arctic-midnight outline-none transition-all;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-arctic-snow;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-arctic-midnight/20 rounded-full hover:bg-arctic-midnight/40;
+}
+
+/* Selection */
+::selection {
+  background: #3D7A8F;
+  color: white;
+}

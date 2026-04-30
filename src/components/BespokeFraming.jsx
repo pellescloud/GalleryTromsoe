@@ -1,48 +1,84 @@
+'use client';
+
 import React from 'react';
+import { motion } from 'framer-motion';
+import { Shovel, Shield, TreePine } from 'lucide-react';
 
 const BespokeFraming = () => {
   return (
-    <section className="py-32 bg-transparent text-primary ">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          <div className="order-2 lg:order-1">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white/10 backdrop-blur-sm p-1 aspect-square border border-primary/20">
-                <img alt="Oak Frame" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCcxdUutIwuuoxHgohZd9CDh9TKTEFO1zbTT_QdLVmNU6fyOyx0nuxg6vTLvAlds4FfCj93NocTpuZgDqjWh4ZXSogoG8uyLoL6qqddgyo-ptwg7r4fqGChyp_xuz6RwBOGT0CcG7qMyTHXwNgZV-cwrYi-uLCyn6fkkUxtLpLW2THirJyOSKpva37b8EgVejLMiXJ9DgMZJpqsJyomt_7GG7yZZQBnFEIrWixeIjYjxKcFQHPOfMZ4SKVjuLr0Fql20cJKXZ_zCA" />
+    <section className="py-32 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="order-2 lg:order-1 relative"
+          >
+            <div className="grid grid-cols-2 gap-6">
+              <div className="aspect-square bg-slate-50 p-2 shadow-sm ring-1 ring-slate-100">
+                <img
+                  src="https://images.unsplash.com/photo-1513519245088-0e12902e35ca?auto=format&fit=crop&q=80&w=600"
+                  alt="Oak Frame Detail"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div className="bg-white/10 backdrop-blur-sm p-1 aspect-square mt-12 border border-primary/20">
-                <img alt="Workshop" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeg73NQGeVVzxtX6Cof6iotioIVlu-yR7RJu9tLKFo0aE-Klct0NBMnXLbzWiQGXHaMD8YqOXiLBwTpidHNF6iiZuNWBf2_pATbcWb8GSeJ_oZIdhy_Vcddt59Hmf4jxYveOJ5MVxCiCTDCNkLos7GWu57QCh7T20yeCCWZfumqAlArkYoF-1sb_yLNm5rTnMuS3OW4mNp44Qqhl3C6Ylq_Ycvy-GWviY_wlZrNJCtYKfyad_TMi6F8M7Bnq7T8cZFskBukTF9HQY" />
-              </div>
-            </div>
-          </div>
-          <div className="order-1 lg:order-2">
-            <span className="text-primary/70 font-label tracking-[0.3em] text-xs uppercase mb-6 block">Artisanal Craft</span>
-            <h2 className="font-headline text-5xl mb-8">Bespoke Framing</h2>
-            <p className="text-primary/80 font-body leading-relaxed text-lg mb-12">Every photograph deserves a sanctuary. Our in-house workshop uses only museum-grade materials, hand-finished in Tromsø.</p>
-            <div className="space-y-8 bg-white/5 backdrop-blur-md p-8 border border-primary/10">
-              <div className="flex items-center gap-6 border-b border-primary/20 pb-6">
-                <span className="material-symbols-outlined text-4xl font-light">forest</span>
-                <div>
-                  <h4 className="font-serif text-xl">Scandinavian Oak</h4>
-                  <p className="text-sm text-primary/70 mt-1">Light, natural, and timeless warmth.</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-6 border-b border-primary/20 pb-6">
-                <span className="material-symbols-outlined text-4xl font-light">shield</span>
-                <div>
-                  <h4 className="font-serif text-xl">Sleek Black Metal</h4>
-                  <p className="text-sm text-primary/70 mt-1">Modern, sharp, and focused precision.</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-6 pb-2">
-                <span className="material-symbols-outlined text-4xl font-light">architecture</span>
-                <div>
-                  <h4 className="font-serif text-xl">Heritage Walnut</h4>
-                  <p className="text-sm text-primary/70 mt-1">Deep, rich character for legacy pieces.</p>
-                </div>
+              <div className="aspect-square bg-slate-50 p-2 shadow-sm ring-1 ring-slate-100 mt-16">
+                <img
+                  src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&q=80&w=600"
+                  alt="Workshop"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
-          </div>
+            {/* Decorative Element */}
+            <div className="absolute -bottom-10 -left-10 w-40 h-40 border-l border-b border-arctic-teal/20 -z-10" />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="order-1 lg:order-2"
+          >
+            <span className="text-arctic-teal font-medium tracking-[0.3em] text-[10px] uppercase mb-6 block">Artisanal Quality</span>
+            <h2 className="font-serif text-5xl md:text-6xl text-arctic-midnight mb-8">Bespoke Framing</h2>
+            <p className="text-arctic-charcoal/70 text-lg leading-relaxed mb-12 max-w-lg">
+              Every photograph deserves a sanctuary. Our in-house workshop uses only museum-grade materials, hand-finished to protect and enhance your piece.
+            </p>
+
+            <div className="space-y-10">
+              <div className="flex gap-6">
+                <div className="flex-shrink-0 w-12 h-12 bg-arctic-snow flex items-center justify-center">
+                  <TreePine className="text-arctic-teal" strokeWidth={1} />
+                </div>
+                <div>
+                  <h4 className="font-serif text-xl text-arctic-midnight mb-2">Scandinavian Oak</h4>
+                  <p className="text-sm text-arctic-charcoal/60 leading-relaxed">
+                    Sustainably sourced light oak, bringing natural warmth and timeless elegance to the cool Arctic tones.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-6">
+                <div className="flex-shrink-0 w-12 h-12 bg-arctic-snow flex items-center justify-center">
+                  <Shield className="text-arctic-teal" strokeWidth={1} />
+                </div>
+                <div>
+                  <h4 className="font-serif text-xl text-arctic-midnight mb-2">Sleek Black Wood</h4>
+                  <p className="text-sm text-arctic-charcoal/60 leading-relaxed">
+                    A deep, matte charcoal finish that provides sharp focus and modern contrast for high-key winter shots.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <button className="mt-16 text-xs font-medium tracking-[0.2em] uppercase border-b border-arctic-midnight pb-2 hover:text-arctic-teal hover:border-arctic-teal transition-all">
+              Discover Our Process
+            </button>
+          </motion.div>
         </div>
       </div>
     </section>
